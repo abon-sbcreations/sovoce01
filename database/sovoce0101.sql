@@ -61,10 +61,28 @@ create table post(
     title varchar(250),
     content text,
     post_date datetime,
-    
+    sort_link varchar(250)
 );
 
+create table cutomer_review(
+    id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title varchar(255),
+    content text,
+    target enum('V','P'),
+    vendor_id int,
+    post_id int,
+    customer_id int not null,
+    rating int
+);
 
+create table advertise(
+    id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    link varchar(250) not null,
+    view_count int,
+    click_count int
+);
 
-
-
+create table popular_search(
+    id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    search_term varchar(250)
+)
