@@ -4,5 +4,9 @@
 -->
 
 <?php require_once('_header.php'); ?>
-<?php //slug goes for database takes out post details.?>
+<?php 
+    print_r(Post::getDetails($_GET['slug']));
+//
+//slug goes for database takes out post details.
+?>
 <?php require_once('_footer.php'); ?>
