@@ -2,20 +2,29 @@
 class Url {
 
 	public static $_page = "page";
-	public static $_folder = PAGES_DIR;
+        public static $_folder = PAGES_DIR;
 	public static $_params = array();
 	
 	public static function getParam($par) {
+            echo "<br>getParam<br>";
+            print_r($_GET);
+            echo "<br>getParam<br>";
 		return isset($_GET[$par]) && $_GET[$par] != "" ?
 				$_GET[$par] : null;
 	}
 	
 	public static function cPage() {
+             echo "<br>cPage<br>";
+            print_r($_GET);
+            echo "<br>cPage<br>";
 		return isset($_GET[self::$_page]) ?
 				$_GET[self::$_page] : 'index';
 	}
 	
 	public static function getPage() {
+             echo "<br>getPage<br>";
+            print_r($_GET);
+            echo "<br>getPage<br>";
 		$page = self::$_folder.DS.self::cPage().".php";
 		$error = self::$_folder.DS."error.php";
 		return is_file($page) ? $page : $error;

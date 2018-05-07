@@ -5,7 +5,7 @@ if(!isset($_SESSION)) {
 
 // site domain name with http
 defined("SITE_URL")
-	|| define("SITE_URL", "http://".$_SERVER['SERVER_NAME']);
+	|| define("SITE_URL", "https://".$_SERVER['SERVER_NAME']);
 	
 // directory separator
 defined("DS")
@@ -42,10 +42,11 @@ defined("EMAILS_PATH")
 // catalogue images path
 defined("CATALOGUE_PATH")
 	|| define("CATALOGUE_PATH", ROOT_PATH.DS."media".DS."catalogue");
-defined('DATABASE_NAME') || define('DATABASE_NAME',"sovoce01");
+
+defined('DATABASE_NAME') || define('DATABASE_NAME',"id5654495_savoce01");
 defined('DATABASE_HOST') || define('DATABASE_HOST',"localhost");
-defined('DATABASE_USER') || define('DATABASE_USER',"root");
-defined('DATABASE_PASS') || define('DATABASE_PASS',"");
+defined('DATABASE_USER') || define('DATABASE_USER',"id5654495_root");
+defined('DATABASE_PASS') || define('DATABASE_PASS',"abondr@1984");
 
 // add all above directories to the include path
 set_include_path(implode(PATH_SEPARATOR, array(

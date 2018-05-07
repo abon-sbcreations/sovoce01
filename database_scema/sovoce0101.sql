@@ -59,9 +59,10 @@ create table vendor_image_list(
 create table post(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     title varchar(250),
+    slug varchar(255),
     content text,
     post_date datetime,
-    sort_link varchar(250)
+    sort_link varchar(250),
 );
 
 create table cutomer_review(
