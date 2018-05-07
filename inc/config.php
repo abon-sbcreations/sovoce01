@@ -42,7 +42,11 @@ defined("EMAILS_PATH")
 // catalogue images path
 defined("CATALOGUE_PATH")
 	|| define("CATALOGUE_PATH", ROOT_PATH.DS."media".DS."catalogue");
-	
+defined('DATABASE_NAME') || define('DATABASE_NAME',"sovoce01");
+defined('DATABASE_HOST') || define('DATABASE_HOST',"localhost");
+defined('DATABASE_USER') || define('DATABASE_USER',"root");
+defined('DATABASE_PASS') || define('DATABASE_PASS',"");
+
 // add all above directories to the include path
 set_include_path(implode(PATH_SEPARATOR, array(
 	realpath(ROOT_PATH.DS.CLASSES_DIR),
