@@ -1,4 +1,8 @@
 <?php
+/**
+ * Author:  abon duttaroy<abon@sbcreationgroup.com>
+ * Created: 5 May, 2018
+ */
 class Login {
 
 	public static $_login_page_front = "/?page=login";

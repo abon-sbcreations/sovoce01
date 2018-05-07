@@ -2,10 +2,6 @@
  * Author:  abon duttaroy<abon@sbcreationgroup.com>
  * Created: 5 May, 2018
  */
-/**
- * Author:  abon duttaroy<abondr@gmail.com>
- * Created: 5 May, 2018
- */
 CREATE TABLE social_user(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     oAuthProvider ENUM('','FB','GGL') NOT NULL,
