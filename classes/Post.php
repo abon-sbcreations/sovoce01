@@ -12,24 +12,24 @@ class Post{
         $db = DbSingle::getObject();
         $result = $db->query("select * from ".self::$_tblPost);
         $rows = [];
-        while($row = $result->fetch_row()){
+        while($row = $result->fetch_assoc()){
             $rows[] = $row;
         }
         return $rows;
     }
-    public static function getDetails($slug = '') {
+    public static function getDetails($id = '') {
         $db = DbSingle::getObject();
-        $sql1 = "select * from " . self::$_tblPost . " where slug = ?";
+        $sql1 = "select * from " . self::$_tblPost . " where id = ?";
         $stmt = $db->prepare($sql1);
         if ($stmt === false) {
             trigger_error('Wrong SQL: ' . $sql . ' Error: ' . $conn->errno . ' ' . $conn->error, E_USER_ERROR);
         }
-        $stmt->bind_param('s', $slug);
+        $stmt->bind_param('i', $slug);
         $stmt->execute();
         $result = $stmt->get_result();
         if ($result->num_rows === 0)
             return ('No Posts Yet');
-        return $result->fetch_row();
+        return $result->fetch_assoc();
     }
 
     public static function addPost(){

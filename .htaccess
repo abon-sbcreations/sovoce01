@@ -10,6 +10,6 @@ RewriteBase /
 
 RewriteRule    ^page/([0-9a-z]+)/?$    index.php?page=$1    [NC,L]
 
-RewriteRule    ^post/([0-9a-z_]+)/?$    index.php?page=post&slug=$1    [NC,L]
+RewriteRule    ^post/([0-9]+)/?$    index.php?page=post&id=$1    [NC,L]
 
 

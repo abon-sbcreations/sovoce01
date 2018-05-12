@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+body,html {
+	font-family:"font Awesome 5 Brands Regular";
+}
+.post {
+	background-color:#8bc53d;
+	border-radius:0px;
+	border:#8bc53d;
+}
+.post:hover {
+	background-color:#77ad2e;
+	border-radius:0px;
+	border:#77ad2e;
+}
+
